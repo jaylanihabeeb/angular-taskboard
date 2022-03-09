@@ -1,0 +1,74 @@
+.task-wrapper {
+  display: flex;
+}
+
+.backlog-wrapper,
+.qa-wrapper,
+.active-wrapper,
+.resolved-wrapper {
+  box-shadow: 1px 1px 5px #c0c0c0;
+  flex-flow: 1;
+  flex-basis: 0;
+  flex-grow: 1;
+  margin-left: 20px;
+  text-align: center;
+  padding: 10px;
+}
+h3 {
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 10px;
+}
+.add-task-wrapper {
+  padding: 10px;
+}
+button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 11px;
+  cursor: pointer;
+  border: none;
+}
+.add-task {
+  background-color: green;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.task-list {
+  /* border: 1px solid #cfcfcf; */
+}
+
+.prev-button {
+  border: 1px solid #0a66c2;
+  background-color: #fff;
+  color: #0a66c2;
+  margin-right: 10px;
+}
+
+.next-button {
+  background-color: #0a66c2;
+  color: #fff;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: end;
+}
+.input-field {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 97%;
+}
+
+.task {
+  box-shadow: 1px 1px 5px #c0c0c0;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 10px;
+}
+
+.task-desc {
+  margin-bottom: 5px;
+}

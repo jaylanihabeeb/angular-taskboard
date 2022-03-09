@@ -1,0 +1,78 @@
+<h1>Task Board</h1>
+
+<div class="task-wrapper">
+  <div class="backlog-wrapper">
+    <h3>Backlog</h3>
+    <button class="add-task" (click)="enableAddTask()">Add Task</button>
+
+    <div class="task-list">
+      <div class="task" *ngFor="let task of backlogTasks">
+        <div class="task-name" [innerHTML]="task.taskName"></div>
+        <div class="task-desc" [innerHTML]="task.taskDescription"></div>
+        <div class="buttons-wrapper">
+          <button class="prev-button" (click)="movePrev(task)">Prev</button>
+          <button class="next-button" (click)="moveNext(task)">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="add-task-wrapper" *ngIf="showAddTask">
+      <div class="input-field">
+        <input
+          type="text"
+          placeholder="Enter task name"
+          id="task-name"
+          [(ngModel)]="taskName"
+        />
+      </div>
+      <div class="input-field">
+        <textarea id="task-description" [(ngModel)]="taskDescription">
+Enter Description</textarea
+        >
+      </div>
+      <div class="buttons-wrapper">
+        <button class="prev-button" (click)="cancelAdd()">Cancel</button>
+        <button class="next-button" (click)="addTask()">Save</button>
+      </div>
+    </div>
+  </div>
+  <div class="active-wrapper">
+    <h3>Active</h3>
+    <div class="task-list">
+      <div class="task" *ngFor="let task of activeTasks">
+        <div class="task-name" [innerHTML]="task.taskName"></div>
+        <div class="task-desc" [innerHTML]="task.taskDescription"></div>
+        <div class="buttons-wrapper">
+          <button class="prev-button" (click)="movePrev(task)">Prev</button>
+          <button class="next-button" (click)="moveNext(task)">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="qa-wrapper">
+    <h3>QA</h3>
+    <div class="task-list">
+      <div class="task" *ngFor="let task of qaTasks">
+        <div class="task-name" [innerHTML]="task.taskName"></div>
+        <div class="task-desc" [innerHTML]="task.taskDescription"></div>
+        <div class="buttons-wrapper">
+          <button class="prev-button" (click)="movePrev(task)">Prev</button>
+          <button class="next-button" (click)="moveNext(task)">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="resolved-wrapper">
+    <h3>Resolved</h3>
+    <div class="task-list">
+      <div class="task" *ngFor="let task of resolvedTasks">
+        <div class="task-name" [innerHTML]="task.taskName"></div>
+        <div class="task-desc" [innerHTML]="task.taskDescription"></div>
+        <div class="buttons-wrapper">
+          <button class="prev-button" (click)="movePrev(task)">Prev</button>
+          <button class="next-button" (click)="moveNext(task)">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
